@@ -3,9 +3,9 @@ public class PaymentPlan {
     private String noSubscriptionFee;
     private int subscriptionFee;
     private String paymentPeriod;
-    private int prepaidWebMb;
-    private boolean unlimitedWebAll;
+    private int prepaidWeb;
     private String prepaidWebUnits;
+    private boolean unlimitedWebAll;
     private boolean unlimitedWebSocial;
     private boolean unlimitedWebAbroad;
     private int prepaidPhonedMinutes;
@@ -13,9 +13,10 @@ public class PaymentPlan {
     private int prepaidSMS;
     private boolean isAdjustable;
 
-    public PaymentPlan(String name) {
+    public PaymentPlan(String name, boolean isAdjustable) {
         this.planName = name;
         this.noSubscriptionFee = "Без абоненской платы";
+        this.isAdjustable = isAdjustable;
     }
 
     public PaymentPlan(String planName, int subscriptionFee, String paymentPeriod, int prepaidWeb,
@@ -25,9 +26,9 @@ public class PaymentPlan {
         this.planName = planName;
         this.subscriptionFee = subscriptionFee;
         this.paymentPeriod = paymentPeriod;
-        this.prepaidWebMb = prepaidWeb;
-        this.unlimitedWebAll = unlimitedWebAll;
+        this.prepaidWeb = prepaidWeb;
         this.prepaidWebUnits = prepaidWebUnits;
+        this.unlimitedWebAll = unlimitedWebAll;
         this.unlimitedWebSocial = unlimitedWebSocial;
         this.unlimitedWebAbroad = unlimitedWebAbroad;
         this.prepaidPhonedMinutes = prepaidPhonedMinutes;
@@ -36,13 +37,13 @@ public class PaymentPlan {
         this.isAdjustable = isAdjustable;
     }
 
-    public PaymentPlan(String planName, int subscriptionFee, String paymentPeriod, int prepaidWebMb,
+    public PaymentPlan(String planName, int subscriptionFee, String paymentPeriod, int prepaidWeb,
                        String prepaidWebUnits, boolean unlimitedWebSocial, int prepaidPhonedMinutes,
                        boolean unlimitedPhoneTele2, int prepaidSMS, boolean isAdjustable) {
         this.planName = planName;
         this.subscriptionFee = subscriptionFee;
         this.paymentPeriod = paymentPeriod;
-        this.prepaidWebMb = prepaidWebMb;
+        this.prepaidWeb = prepaidWeb;
         this.prepaidWebUnits = prepaidWebUnits;
         this.unlimitedWebSocial = unlimitedWebSocial;
         this.prepaidPhonedMinutes = prepaidPhonedMinutes;
