@@ -8,7 +8,7 @@ public class PaymentPlan {
     private boolean unlimitedWebAll;
     private boolean unlimitedWebSocial;
     private boolean unlimitedWebAbroad;
-    private int prepaidPhonedMinutes;
+    private int prepaidPhoneMinutes;
     private boolean unlimitedPhoneTele2;
     private int prepaidSMS;
     private boolean isAdjustable;
@@ -19,26 +19,21 @@ public class PaymentPlan {
         this.isAdjustable = isAdjustable;
     }
 
-    public PaymentPlan(String planName, int subscriptionFee, String paymentPeriod, int prepaidWeb,
-                       boolean unlimitedWebAll, String prepaidWebUnits, boolean unlimitedWebSocial,
-                       boolean unlimitedWebAbroad, int prepaidPhonedMinutes, boolean unlimitedPhoneTele2,
-                       int prepaidSMS, boolean isAdjustable) {
+    public PaymentPlan(String planName, int subscriptionFee, String paymentPeriod,
+                       boolean unlimitedWebAll, int prepaidPhoneMinutes,
+                       boolean unlimitedPhoneTele2, int prepaidSMS, boolean isAdjustable) {
         this.planName = planName;
         this.subscriptionFee = subscriptionFee;
         this.paymentPeriod = paymentPeriod;
-        this.prepaidWeb = prepaidWeb;
-        this.prepaidWebUnits = prepaidWebUnits;
         this.unlimitedWebAll = unlimitedWebAll;
-        this.unlimitedWebSocial = unlimitedWebSocial;
-        this.unlimitedWebAbroad = unlimitedWebAbroad;
-        this.prepaidPhonedMinutes = prepaidPhonedMinutes;
+        this.prepaidPhoneMinutes = prepaidPhoneMinutes;
         this.unlimitedPhoneTele2 = unlimitedPhoneTele2;
         this.prepaidSMS = prepaidSMS;
         this.isAdjustable = isAdjustable;
     }
 
     public PaymentPlan(String planName, int subscriptionFee, String paymentPeriod, int prepaidWeb,
-                       String prepaidWebUnits, boolean unlimitedWebSocial, int prepaidPhonedMinutes,
+                       String prepaidWebUnits, boolean unlimitedWebSocial, boolean unlimitedWebAbroad, int prepaidPhoneMinutes,
                        boolean unlimitedPhoneTele2, int prepaidSMS, boolean isAdjustable) {
         this.planName = planName;
         this.subscriptionFee = subscriptionFee;
@@ -46,7 +41,8 @@ public class PaymentPlan {
         this.prepaidWeb = prepaidWeb;
         this.prepaidWebUnits = prepaidWebUnits;
         this.unlimitedWebSocial = unlimitedWebSocial;
-        this.prepaidPhonedMinutes = prepaidPhonedMinutes;
+        this.unlimitedWebAbroad = unlimitedWebAbroad;
+        this.prepaidPhoneMinutes = prepaidPhoneMinutes;
         this.unlimitedPhoneTele2 = unlimitedPhoneTele2;
         this.prepaidSMS = prepaidSMS;
         this.isAdjustable = isAdjustable;
